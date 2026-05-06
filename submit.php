@@ -72,13 +72,13 @@ if ($rating < 1 || $rating > 5) {
 if ($project_url === '' || !filter_var($project_url, FILTER_VALIDATE_URL) || mb_strlen($project_url) > 255) {
     $errors['project_url'] = 'A valid project URL is required.';
 }
-if (mb_strlen($problem_before) < 50 || mb_strlen($problem_before) > 300) {
+if (mb_strlen($problem_before) < 40 || mb_strlen($problem_before) > 300) {
     $errors['problem_before'] = '"Problem before" must be between 50 and 300 characters.';
 }
-if (mb_strlen($solution_after) < 100 || mb_strlen($solution_after) > 500) {
+if (mb_strlen($solution_after) < 50 || mb_strlen($solution_after) > 500) {
     $errors['solution_after'] = '"Solution / what was built" must be between 100 and 500 characters.';
 }
-if (mb_strlen($recommendation) < 50 || mb_strlen($recommendation) > 300) {
+if (mb_strlen($recommendation) < 40 || mb_strlen($recommendation) > 300) {
     $errors['recommendation'] = '"Recommendation" must be between 50 and 300 characters.';
 }
 if ($headline !== '' && mb_strlen($headline) > 120) {
@@ -200,7 +200,7 @@ try {
     </p>
 
     <p style="margin-top:24px;">
-        <a href="https://rielcode.com/admin.php?section=testimonials" style="background:#3a7bff;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:600;">Review in Admin Panel</a>
+        <a href="https://rielcode.com/admin.php?table=testimonials" style="background:#3a7bff;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:600;">Review in Admin Panel</a>
     </p>
 </div>';
 

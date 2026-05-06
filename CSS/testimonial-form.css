@@ -270,7 +270,7 @@ body {
 .rating-group {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-start;
+  justify-content: flex-end;
   gap: 4px;
   margin-bottom: 6px;
 }

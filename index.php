@@ -145,25 +145,25 @@ function hasError(string $k): bool {
                 <div class="section-label">03 &mdash; Your story</div>
                 <div class="field-group <?= hasError('problem_before') ? 'has-error' : '' ?>">
                     <label class="field-label" for="problem_before">What problem did you have before working with Rielcode? <span class="req">*</span></label>
-                    <textarea id="problem_before" name="problem_before" maxlength="300" minlength="50" required data-counter><?= old('problem_before') ?></textarea>
+                    <textarea id="problem_before" name="problem_before" maxlength="300" minlength="40" required data-counter><?= old('problem_before') ?></textarea>
                     <div class="field-meta">
-                        <span class="hint">Min 50 characters. The "before" picture.</span>
+                        <span class="hint">Min 40 characters. The "before" picture.</span>
                         <span class="char-count" data-target="problem_before">0 / 300</span>
                     </div>
                 </div>
                 <div class="field-group <?= hasError('solution_after') ? 'has-error' : '' ?>">
                     <label class="field-label" for="solution_after">What did Rielcode build for you, and how did it solve that problem? <span class="req">*</span></label>
-                    <textarea id="solution_after" name="solution_after" maxlength="500" minlength="100" required data-counter><?= old('solution_after') ?></textarea>
+                    <textarea id="solution_after" name="solution_after" maxlength="500" minlength="50" required data-counter><?= old('solution_after') ?></textarea>
                     <div class="field-meta">
-                        <span class="hint">Min 100 characters. The main story.</span>
+                        <span class="hint">Min 50 characters. The main story.</span>
                         <span class="char-count" data-target="solution_after">0 / 500</span>
                     </div>
                 </div>
                 <div class="field-group <?= hasError('recommendation') ? 'has-error' : '' ?>">
                     <label class="field-label" for="recommendation">Would you recommend Rielcode to others? Why? <span class="req">*</span></label>
-                    <textarea id="recommendation" name="recommendation" maxlength="300" minlength="50" required data-counter><?= old('recommendation') ?></textarea>
+                    <textarea id="recommendation" name="recommendation" maxlength="300" minlength="40" required data-counter><?= old('recommendation') ?></textarea>
                     <div class="field-meta">
-                        <span class="hint">Min 50 characters.</span>
+                        <span class="hint">Min 40 characters.</span>
                         <span class="char-count" data-target="recommendation">0 / 300</span>
                     </div>
                 </div>
