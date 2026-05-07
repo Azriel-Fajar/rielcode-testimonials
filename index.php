@@ -67,15 +67,15 @@ function hasError(string $k): bool {
 <body class="rc-redesign">
     <div class="noise"></div>
 
-    <header class="site-header">
-        <a href="https://rielcode.com" class="logo-link">
-            <img src="IMG/logo.png" alt="Rielcode" onerror="this.style.display='none'">
+    <div class="page-topbar">
+        <a href="https://rielcode.com" class="back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to rielcode.com
         </a>
-        <a href="https://rielcode.com" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            rielcode.com
+        <a href="https://rielcode.com" class="topbar-logo">
+            <img src="IMG/Rielcode Logo Transparent.png" alt="Rielcode">
         </a>
-    </header>
+    </div>
 
     <main class="page-wrapper">
 

@@ -55,37 +55,40 @@ body {
   background-size: 128px;
 }
 
-/* ── Header ── */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* ── Top bar ── */
+.page-topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  border-bottom: 1px solid var(--border);
-  background: rgba(8, 12, 20, 0.72);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
 }
 
-.logo-link img {
-  height: 34px;
-  display: block;
-}
-
-.back-link {
+.back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 9px 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
   color: var(--faint);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  transition: color 0.25s var(--ease);
+  letter-spacing: 0.02em;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
-.back-link:hover { color: var(--text); }
+.back-btn:hover {
+  background: rgba(255,255,255,0.09);
+  color: var(--text);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.topbar-logo img {
+  height: 36px;
+  display: block;
+  filter: brightness(1.15) drop-shadow(0 0 6px rgba(255,255,255,0.18));
+}
 
 /* ── Page wrapper ── */
 .page-wrapper {
@@ -110,7 +113,6 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--blue);
-  border: 1px solid rgba(58,123,255,0.25);
   border-radius: var(--radius-pill);
   padding: 4px 14px;
   margin-bottom: 20px;
@@ -498,7 +500,8 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .site-header { padding: 18px 20px; }
+  .page-topbar { padding: 14px 20px; }
+  .topbar-logo img { height: 28px; }
   .page-wrapper { padding: 40px 16px 60px; }
   .intro h1 { font-size: 1.8rem; }
   .form-section { padding: 24px 20px; }
