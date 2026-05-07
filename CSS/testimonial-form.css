@@ -57,13 +57,17 @@ body {
 
 /* ── Header ── */
 .site-header {
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 40px;
+  padding: 20px 40px;
   border-bottom: 1px solid var(--border);
+  background: rgba(8, 12, 20, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .logo-link img {
@@ -119,6 +123,11 @@ body {
 .tag-line.rc-eyebrow::before {
   content: "// ";
   color: rgba(255,255,255,0.35);
+}
+/* success-card eyebrow spacing */
+.success-card .tag-line {
+  display: block;
+  margin: 12px auto 20px;
 }
 
 .intro h1 {

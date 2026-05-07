@@ -19,16 +19,10 @@ session_destroy();
 <body class="rc-redesign">
     <div class="noise"></div>
 
-    <header class="site-header">
-        <a href="https://rielcode.com" class="logo-link">
-            <img src="IMG/logo.png" alt="Rielcode" onerror="this.style.display='none'">
-        </a>
-    </header>
-
     <div class="thankyou-wrapper">
         <div class="success-card">
             <div class="check-icon">&#10003;</div>
-            <div class="tag-line rc-eyebrow" style="margin-bottom:16px;">submitted</div>
+            <div class="tag-line rc-eyebrow">submitted</div>
             <h2>Thank you.</h2>
             <p>
                 Your testimonial has been received and is pending review.
