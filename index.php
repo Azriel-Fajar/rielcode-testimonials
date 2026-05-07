@@ -64,7 +64,7 @@ function hasError(string $k): bool {
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/testimonial-form.css">
 </head>
-<body>
+<body class="rc-redesign">
     <div class="noise"></div>
 
     <header class="site-header">
@@ -80,7 +80,7 @@ function hasError(string $k): bool {
     <main class="page-wrapper">
 
         <div class="intro" style="animation-delay:0.05s">
-            <div class="tag-line">Client Testimonial</div>
+            <div class="tag-line rc-eyebrow">client testimonial</div>
             <h1>Tell us about your <br><span class="gradient-text">Rielcode experience</span></h1>
             <p>Your feedback shapes how Rielcode grows and helps future clients make confident decisions. Takes about 2 minutes.</p>
         </div>

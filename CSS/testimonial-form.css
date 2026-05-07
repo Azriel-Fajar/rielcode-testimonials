@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap");
 
-/* ── Tokens ── */
+/* ── Tokens (aligned with Rielcode design system) ── */
 :root {
   --blue:          #3a7bff;
   --blue-dark:     #195bde;
@@ -17,9 +17,15 @@
   --error:         #ff4b4b;
   --gold:          #ffc73a;
   --success:       #3ecf8e;
-  --radius:        12px;
-  --radius-lg:     20px;
+  /* soft radius scale (sm 8 / md 16 / lg 28) */
+  --radius:        16px;
+  --radius-sm:     8px;
+  --radius-lg:     28px;
+  --radius-pill:   50px;
   --ease:          cubic-bezier(0.4,0,0.2,1);
+  /* glow shadows */
+  --shadow-glow:   0 0 0 1px rgba(58,123,255,0.35), 0 0 32px rgba(58,123,255,0.18);
+  --shadow-glow-success: 0 0 0 1px rgba(62,207,142,0.35), 0 0 40px rgba(62,207,142,0.22);
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -101,9 +107,18 @@ body {
   text-transform: uppercase;
   color: var(--blue);
   border: 1px solid rgba(58,123,255,0.25);
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   padding: 4px 14px;
   margin-bottom: 20px;
+}
+/* eyebrow // motif (design contract) */
+.tag-line.rc-eyebrow {
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
+}
+.tag-line.rc-eyebrow::before {
+  content: "// ";
+  color: rgba(255,255,255,0.35);
 }
 
 .intro h1 {
@@ -168,7 +183,8 @@ body {
   transform: translateY(0);
 }
 .form-section:hover {
-  border-color: rgba(255,255,255,0.11);
+  border-color: rgba(58,123,255,0.2);
+  box-shadow: var(--shadow-glow);
 }
 
 .section-label {
@@ -337,7 +353,7 @@ body {
   background: linear-gradient(135deg, var(--blue) 0%, #6a3de8 100%);
   color: #fff;
   border: none;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-family: 'Outfit', sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -355,7 +371,7 @@ body {
 }
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 36px rgba(58,123,255,0.38);
+  box-shadow: var(--shadow-glow), 0 12px 36px rgba(58,123,255,0.28);
 }
 .submit-btn:active { transform: translateY(0); }
 .submit-btn:disabled {
@@ -405,6 +421,11 @@ body {
   max-width: 520px;
   width: 100%;
   animation: fadeUp 0.6s var(--ease) both;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.success-card:hover {
+  border-color: rgba(62,207,142,0.25);
+  box-shadow: var(--shadow-glow-success);
 }
 
 .check-icon {
@@ -418,7 +439,7 @@ body {
   font-size: 2rem;
   color: white;
   margin-bottom: 24px;
-  box-shadow: 0 0 40px rgba(62,207,142,0.3);
+  box-shadow: var(--shadow-glow-success);
   animation: popIn 0.5s var(--ease) 0.2s both;
 }
 
@@ -444,7 +465,7 @@ body {
   background: linear-gradient(135deg, var(--blue), #6a3de8);
   color: #fff;
   padding: 13px 28px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
@@ -452,7 +473,7 @@ body {
 }
 .back-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(58,123,255,0.38);
+  box-shadow: var(--shadow-glow), 0 12px 32px rgba(58,123,255,0.28);
 }
 
 /* ── Animations ── */

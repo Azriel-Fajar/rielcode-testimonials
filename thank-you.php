@@ -13,10 +13,10 @@ session_destroy();
     <link rel="icon" type="image/png" href="IMG/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/testimonial-form.css">
 </head>
-<body>
+<body class="rc-redesign">
     <div class="noise"></div>
 
     <header class="site-header">
@@ -28,6 +28,7 @@ session_destroy();
     <div class="thankyou-wrapper">
         <div class="success-card">
             <div class="check-icon">&#10003;</div>
+            <div class="tag-line rc-eyebrow" style="margin-bottom:16px;">submitted</div>
             <h2>Thank you.</h2>
             <p>
                 Your testimonial has been received and is pending review.
