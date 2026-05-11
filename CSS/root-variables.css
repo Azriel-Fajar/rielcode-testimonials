@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+/**
+ * ============================================================
+ *  ROOT DESIGN TOKENS — single source of truth
+ *  Synced with prototype design-system spec
+ * ============================================================
+ */
+
+:root {
+  /* ── Brand / Accent ── */
+  --color-primary:        #3a7bff;
+  --color-primary-dark:   #195bde;
+  --color-primary-hover:  #1e55c4;
+
+  --color-green:          #3ecf8e;
+  --color-green-dark:     #1a9e68;
+
+  --color-purple:         #a35bff;
+  --color-purple-dark:    #7c3de0;
+  --color-purple-light:   #d38bff;
+
+  --color-red:            #ff4b4b;
+  --color-red-dark:       #e84118;
+
+  --color-success:        #22c55e;
+  --color-success-dark:   #16a34a;
+
+  --color-cyan:           #00d4ff;
+
+  /* ── Promo Gradient ── */
+  --color-promo-from:     #4f46e5;
+  --color-promo-to:       #9333ea;
+  --gradient-promo:       linear-gradient(135deg, var(--color-promo-from) 0%, var(--color-promo-to) 100%);
+
+  /* ── Backgrounds ── */
+  --color-bg-body:        #080c14;
+  --color-bg-alt:         #1f2529;
+  --color-bg-deep:        #1a1a1a;
+  --color-bg-deepest:     #111315;
+  --color-bg-card:        #2a2a2a;
+  --color-bg-input:       #2a2f35;
+  --color-bg-input-alt:   #2d3439;
+  --color-bg-sidebar:     #2f3640;
+  --color-bg-admin-body:  #f5f6fa;
+  --color-bg-white:       #ffffff;
+
+  /* ── Text ── */
+  --color-text-primary:   #ffffff;
+  --color-text-muted:     #cccccc;
+  --color-text-dimmed:    rgba(255,255,255,0.60);
+  --color-text-faint:     rgba(255,255,255,0.38);
+  --color-text-dark:      #333333;
+
+  /* ── Border ── */
+  --color-border:         rgba(255,255,255,0.08);
+  --color-border-hover:   rgba(255,255,255,0.18);
+  --color-border-divider: rgba(255,255,255,0.32);
+  --color-border-admin:   #dcdde1;
+
+  /* ── Shadow / Glow ── */
+  --shadow-card:          0 10px 20px rgba(0,0,0,0.2);
+  --shadow-glow-blue:     0 0 15px rgba(58,123,255,0.5);
+  --shadow-glow-green:    0 0 15px rgba(62,207,142,0.5);
+  --shadow-glow-purple:   0 0 15px rgba(163,91,255,0.5);
+  --shadow-glow-red:      0 0 10px rgba(255,75,75,0.4);
+
+  /* ── Type families ── */
+  --font-display: "Syne", "Outfit", sans-serif;
+  --font-main:    "Outfit", sans-serif;
+  --font-ui:      "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  /* ── Type scale ── */
+  --fs-display-xl: 72px;
+  --fs-display-lg: 56px;
+  --fs-h1:         40px;
+  --fs-h2:         32px;
+  --fs-h3:         24px;
+  --fs-h4:         20px;
+  --fs-body-lg:    18px;
+  --fs-body-md:    16px;
+  --fs-body-sm:    14px;
+  --fs-label:      12px;
+  --fs-code:       14px;
+
+  --lh-display-xl: 1.05;
+  --lh-display-lg: 1.10;
+  --lh-h1:         1.20;
+  --lh-h2:         1.25;
+  --lh-h3:         1.30;
+  --lh-h4:         1.40;
+  --lh-body-lg:    1.65;
+  --lh-body-md:    1.60;
+  --lh-body-sm:    1.55;
+  --lh-label:      1.40;
+  --lh-code:       1.50;
+
+  --ls-label:      0.08em;
+
+  /* ── Spacing (base-8) ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* ── Radii ── */
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   28px;
+  --radius-xl:   40px;
+  --radius-pill: 50px;
+
+  /* ── Motion ── */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
+
+  /* ── Z-index ── */
+  --z-nav:     1050;
+  --z-overlay: 10000;
+
+  /* ── Layout ── */
+  --container-max:      1200px;
+  --section-py-desktop: 120px;
+  --section-py-mobile:  64px;
+
+  /* ── Tweak defaults (locked from prototype TWEAK_DEFAULTS) ── */
+  --rc-accent: var(--color-primary);
+}
