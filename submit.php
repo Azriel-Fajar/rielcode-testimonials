@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    $t = trim($_GET['t'] ?? '');
+    header('Location: ' . ($t !== '' ? '/?t=' . urlencode($t) : 'https://rielcode.com'));
+    exit;
+}
+
 require_once __DIR__ . '/connection.php';
 require_once __DIR__ . '/../Rielcode/PHPMailer/src/PHPMailer.php';
 require_once __DIR__ . '/../Rielcode/PHPMailer/src/SMTP.php';
@@ -8,12 +14,6 @@ require_once __DIR__ . '/../Rielcode/PHPMailer/src/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception as MailException;
-
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    $t = trim($_GET['t'] ?? '');
-    header('Location: ' . ($t !== '' ? '/?t=' . urlencode($t) : 'https://rielcode.com'));
-    exit;
-}
 
 $loadedAt     = (int)($_SESSION['form_loaded_at'] ?? 0);
 $sessionToken = $_SESSION['csrf_token'] ?? '';
