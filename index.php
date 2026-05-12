@@ -105,7 +105,7 @@ function hasError(string $k): bool {
                 <div class="row-2col">
                     <div class="field-group <?= hasError('client_name') ? 'has-error' : '' ?>">
                         <label class="field-label" for="client_name">Your name <span class="req">*</span></label>
-                        <input type="text" id="client_name" name="client_name" maxlength="80" required value="<?= old('client_name') ?>">
+                        <input type="text" id="client_name" name="client_name" maxlength="80" required placeholder="e.g. Jane Smith" value="<?= old('client_name') ?>">
                     </div>
                     <div class="field-group <?= hasError('role_title') ? 'has-error' : '' ?>">
                         <label class="field-label" for="role_title">Role / title <span class="req">*</span></label>
@@ -114,7 +114,7 @@ function hasError(string $k): bool {
                 </div>
                 <div class="field-group <?= hasError('business_name') ? 'has-error' : '' ?>">
                     <label class="field-label" for="business_name">Business / company name <span class="req">*</span></label>
-                    <input type="text" id="business_name" name="business_name" maxlength="100" required value="<?= old('business_name') ?>">
+                    <input type="text" id="business_name" name="business_name" maxlength="100" required placeholder="e.g. Acme Inc." value="<?= old('business_name') ?>">
                 </div>
             </div>
 
