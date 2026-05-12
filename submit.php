@@ -10,7 +10,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception as MailException;
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: https://rielcode.com');
+    $t = trim($_GET['t'] ?? '');
+    header('Location: ' . ($t !== '' ? '/?t=' . urlencode($t) : 'https://rielcode.com'));
     exit;
 }
 
