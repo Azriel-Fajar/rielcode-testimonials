@@ -8,9 +8,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 require_once __DIR__ . '/connection.php';
-require_once __DIR__ . '/../Rielcode/PHPMailer/src/PHPMailer.php';
-require_once __DIR__ . '/../Rielcode/PHPMailer/src/SMTP.php';
-require_once __DIR__ . '/../Rielcode/PHPMailer/src/Exception.php';
+
+$_phpmailerBase = file_exists('/home/rier5192/public_html/PHPMailer/src/PHPMailer.php')
+    ? '/home/rier5192/public_html/PHPMailer/src'
+    : __DIR__ . '/../Rielcode/PHPMailer/src';
+require_once $_phpmailerBase . '/PHPMailer.php';
+require_once $_phpmailerBase . '/SMTP.php';
+require_once $_phpmailerBase . '/Exception.php';
+unset($_phpmailerBase);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception as MailException;
@@ -153,7 +158,11 @@ $uStmt->close();
 unset($_SESSION['csrf_token'], $_SESSION['form_loaded_at'], $_SESSION['invite_token']);
 
 // Notify admin via PHPMailer
-include __DIR__ . '/../Rielcode/smtp_config.php';
+$_smtpConfig = file_exists('/home/rier5192/public_html/smtp_config.php')
+    ? '/home/rier5192/public_html/smtp_config.php'
+    : __DIR__ . '/../Rielcode/smtp_config.php';
+include $_smtpConfig;
+unset($_smtpConfig);
 
 $adminEmail = 'afw1407@gmail.com';
 
