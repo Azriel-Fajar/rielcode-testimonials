@@ -4,14 +4,14 @@
  * Reuses main rielcode.com config (shared DB).
  *
  * Production config path : /home/rier5192/config.php
- * Local fallback         : ../Rielcode/config.php (same XAMPP root)
+ * Local fallback         : ../config.php (nested under Rielcode/)
  */
 
 $_rcConfigPath = '/home/rier5192/config.php';
 if (file_exists($_rcConfigPath)) {
     $_rcCfg = require $_rcConfigPath;
 } else {
-    $_rcCfg = require __DIR__ . '/../Rielcode/config.php';
+    $_rcCfg = require __DIR__ . '/../config.php';
 }
 
 $conn = mysqli_connect(

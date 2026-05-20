@@ -11,7 +11,7 @@ require_once __DIR__ . '/connection.php';
 
 $_phpmailerBase = file_exists('/home/rier5192/public_html/PHPMailer/src/PHPMailer.php')
     ? '/home/rier5192/public_html/PHPMailer/src'
-    : __DIR__ . '/../Rielcode/PHPMailer/src';
+    : __DIR__ . '/../PHPMailer/src';
 require_once $_phpmailerBase . '/PHPMailer.php';
 require_once $_phpmailerBase . '/SMTP.php';
 require_once $_phpmailerBase . '/Exception.php';
@@ -160,7 +160,7 @@ unset($_SESSION['csrf_token'], $_SESSION['form_loaded_at'], $_SESSION['invite_to
 // Notify admin via PHPMailer
 $_smtpConfig = file_exists('/home/rier5192/public_html/smtp_config.php')
     ? '/home/rier5192/public_html/smtp_config.php'
-    : __DIR__ . '/../Rielcode/smtp_config.php';
+    : __DIR__ . '/../smtp_config.php';
 include $_smtpConfig;
 unset($_smtpConfig);
 
